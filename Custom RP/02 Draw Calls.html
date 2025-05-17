@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cn">
+	<head prefix>
+		<meta charset="utf-8" />
+		<title>随心记</title>
+		<meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="../styles.css">
+		<link rel="icon" href="../favicon.jpg" sizes="16x16">
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<a href="../index.html"><img src="../favicon.jpg" alt="favicon" width="45" height="45"></a>
+			</nav>
+			<nav>
+				<a href="../index.html">Home</a>
+			</nav>
+		</header>
+		
+		<main>
+			<article>
+                <header>
+				    <h1>Draw Calls</h1>
+                </header>
+
+                <section>
+					<h3>SRP Batcher</h3>
+
+                    <p>
+                        批处理(Batching)是将多个 draw call 合并的过程，减少 CPU 和 GPU 之间的通信时间。
+                    </p>
+                    <p>
+                        Unity 的 SRP Batcher 允许在不使用 GPU 实例化(Instancing) 的情况下批处理 draw call。SRP Batcher 通过将多个材质相同的物体合并为一个 draw call 来减少 draw call 的数量。
+                    </p>
+				</section>
+
+                <section>
+                    <h3>GPU Instancing</h3>
+
+                    <p>
+                        GPU 实例化(Instancing)是将多个相同的物体合并为一个 draw call 的过程。GPU 实例化允许在不使用 SRP Batcher 的情况下批处理 draw call。
+                    </p>
+                    <p>
+                        GPU 实例化通过将多个相同的物体合并为一个 draw call 来减少 draw call 的数量。
+                    </p>
+			</article>
+		</main>
+
+		<footer>
+			<h3>呱</h3>
+		</footer>
+
+		<script src="../main.js"></script>
+	</body>
+</html>
