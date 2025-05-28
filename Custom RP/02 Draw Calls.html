@@ -37,13 +37,21 @@
 
                 <section>
                     <h3>GPU Instancing</h3>
+                    <p>
+                        GPU 实例化(Instancing)是另一种将多个使用相同的网格(mesh)物体合并为一个 draw call 的过程。
+                    </p>
+                </section>
 
+                <section>
+                    <h3>Dynamic Batching</h3>
                     <p>
-                        GPU 实例化(Instancing)是将多个相同的物体合并为一个 draw call 的过程。GPU 实例化允许在不使用 SRP Batcher 的情况下批处理 draw call。
+                        另一种减少 draw call 的方法，是一种老的技术用于将较小的 mesh 的物体并且共享一个 material 合并成一个大的 mesh 进行绘制。比如 Cube 可以但 Sphere 不可以。
+                        需要禁用 GPU Instancing 才能启用，也需要禁用 SRP Batcher。
                     </p>
                     <p>
-                        GPU 实例化通过将多个相同的物体合并为一个 draw call 来减少 draw call 的数量。
+                        In general GPU instancing works better than dynamic batching. The approach also has some caveats, for example when different scales are involved then the normal vectors of the larger mesh aren't guaranteed to be unit-length. Also, draw order changes as it's now a single mesh instead of multiple.
                     </p>
+                </section>
 			</article>
 		</main>
 
